@@ -13,7 +13,7 @@ const Story = (props: Props) => {
       <Link href="#">
         <a>
           <div className="image-container">
-            <div className="image-hover">
+            <div className="image-scale">
               <Image
                 src={`${Object.values(data)[6].photos[0]}`}
                 alt="Vintage portrait photography collection"
@@ -51,6 +51,7 @@ const Story = (props: Props) => {
           height: 423px;
           position: relative;
           padding: 20px;
+          overflow: hidden;
         }
         .shadow-image {
           box-shadow: inset 0 -200px 200px -200px black;
@@ -60,13 +61,14 @@ const Story = (props: Props) => {
           top: 0;
           left: 0;
         }
-        .image-hover {
-          transition: transform 0.2s;
-          width: 200px;
-          height: 200px;
+        .image-scale {
+          transition: transform 0.5s ease;
+          width: 666px;
+          height: 423px;
+          overflow: hidden;
         }
-        .image-hover:hover {
-          transform: scale(1.5);
+        .image-container:hover .image-scale {
+          transform: scale(1.3);
         }
         .text-container {
           position: absolute;

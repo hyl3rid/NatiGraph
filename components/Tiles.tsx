@@ -16,11 +16,13 @@ const Tiles = (props: Props) => {
           <a className="anchor-container">
             <div className="card-container card-box-shadow">
               <div className="image-container">
-                <Image
-                  src="https://images.unsplash.com/photo-1624239364354-93ae3e590f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80"
-                  height="215"
-                  width="313"
-                ></Image>
+                <div className="image-scale">
+                  <Image
+                    src="https://images.unsplash.com/photo-1624239364354-93ae3e590f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80"
+                    height="215"
+                    width="313"
+                  ></Image>
+                </div>
                 <div className="green-animated-border"></div>
               </div>
               <div className="card-texts">
@@ -52,12 +54,11 @@ const Tiles = (props: Props) => {
           <a className="anchor-container">
             <div className="card-container">
               <div className="image-container">
-                <div className="img-hover-zoom">
+                <div className="image-scale">
                   <Image
                     src="https://images.unsplash.com/photo-1624239364354-93ae3e590f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80"
                     layout="fill"
                     objectFit="cover"
-                    className="image-scale"
                   ></Image>
                 </div>
                 <div className="green-animated-border"></div>
@@ -163,20 +164,18 @@ const Tiles = (props: Props) => {
           position: relative;
           display: flex;
           flex-direction: column;
-        }
-        /* [1] The container */
-        .img-hover-zoom {
           height: 215px;
           width: 313px;
-          overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+          overflow: hidden;
         }
-        /* [2] Transition property for smooth transformation of images */
-        .img-hover-zoom .image-scale {
+        .image-scale {
           transition: transform 0.5s ease;
+          height: 215px;
+          width: 313px;
+          overflow: hidden;
         }
-        /* [3] Finally, transforming the image when container gets hovered */
-        .img-hover-zoom:hover .image-scale {
-          transform: scale(1.5);
+        .card-container:hover .image-scale {
+          transform: scale(1.3);
         }
         .green-animated-border {
           box-shadow: none;

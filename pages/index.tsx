@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import Post, { PostProps } from "../components/Post";
 import Today from "../components/Today";
 import Story from "../components/Story";
+import Tiles from "../components/Tiles";
 import prisma from "../lib/prisma";
 import { usePost } from "../context/PostContext";
 
@@ -35,7 +36,10 @@ const Blog: React.FC<Props> = () => {
           </div>
           <div className="stories">
             <Today />
-            <Story />
+            <div>
+              <Story />
+              <Tiles />
+            </div>
           </div>
         </div>
       </div>
@@ -57,6 +61,7 @@ const Blog: React.FC<Props> = () => {
           font-family: "Century Gothic", sans-serif;
           text-transform: uppercase;
           font-size: 54px;
+          font-weight: 700;
           letter-spacing: 3px;
           line-height: 1.5;
           text-align: center;

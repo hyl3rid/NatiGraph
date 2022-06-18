@@ -8,7 +8,6 @@ type Props = {};
 const Story = (props: Props) => {
   const data = usePost();
 
-  console.log(Object.values(data)[6]);
   return (
     <>
       <Link href="#">
@@ -107,6 +106,8 @@ const Story = (props: Props) => {
           line-height: 1.5;
           text-transform: uppercase;
           margin-top: 18px;
+          height: 32px;
+          align-items: center;
         }
         .icon-container {
           height: 18px;

@@ -16,6 +16,11 @@ const Layout: React.FC<Props> = (props) => (
         --main-color: #66cc66;
       }
 
+      @font-face {
+        font-family: "Century Gothic";
+        src: url("../fonts/CenturyGothic.ttf");
+      }
+
       html {
         box-sizing: border-box;
       }

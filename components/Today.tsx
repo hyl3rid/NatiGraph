@@ -24,8 +24,8 @@ const Today = (props: Props) => {
                 <a
                   className="anchor-tag img-margin"
                   style={{
-                    width: "100px",
-                    height: "100px",
+                    width: "90px",
+                    height: "90px",
                     position: "relative",
                   }}
                 >
@@ -38,7 +38,7 @@ const Today = (props: Props) => {
               </Link>
               <div className="text-container">
                 <Link href="#">
-                  <a className="anchor-tag">
+                  <a className="anchor-tag anchor-tag-padding">
                     <span className="category-span">{item.category || ""}</span>
                   </a>
                 </Link>
@@ -70,7 +70,7 @@ const Today = (props: Props) => {
           .card-container {
             display: flex;
             width: 313px;
-            height: 127px;
+            margin-bottom: 30px;
           }
           .text-container {
             display: flex;
@@ -83,6 +83,7 @@ const Today = (props: Props) => {
             letter-spacing: 1px;
             font-weight: 700;
             line-height: 1.5;
+            letter-spacing: 3px;
             text-transform: uppercase;
             color: #fff;
           }
@@ -98,6 +99,8 @@ const Today = (props: Props) => {
           .anchor-tag {
             color: #fff;
             text-decoration: none;
+          }
+          .anchor-tag-padding {
             padding-bottom: 4px;
           }
           .anchor-container {

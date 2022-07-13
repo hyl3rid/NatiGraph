@@ -93,6 +93,7 @@ const Tiles = (props: Props) => {
         .cards-containers {
           display: flex;
           justify-content: space-between;
+          margin-bottom: 60px;
         }
         .anchor-container {
           text-decoration: none;
@@ -175,7 +176,7 @@ const Tiles = (props: Props) => {
           overflow: hidden;
         }
         .card-container:hover .image-scale {
-          transform: scale(1.3);
+          transform: scale(1.1);
         }
         .green-animated-border {
           box-shadow: none;

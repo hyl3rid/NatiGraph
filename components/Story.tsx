@@ -1,7 +1,7 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { usePost } from "../context/PostContext";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { usePost } from '../context/PostContext';
 
 type Props = {};
 
@@ -10,38 +10,38 @@ const Story = (props: Props) => {
 
   return (
     <>
-      <Link href="#">
+      <Link href='#'>
         <a>
-          <div className="image-container">
-            <div className="image-scale">
+          <div className='image-container'>
+            <div className='image-scale'>
               <Image
                 src={`${Object.values(data)[6].photos[0]}`}
-                alt="Vintage portrait photography collection"
-                layout="fill"
-                objectFit="cover"
+                alt='Vintage portrait photography collection'
+                layout='fill'
+                objectFit='cover'
               ></Image>
             </div>
-            <div className="text-container">
-              <Link href="#">
-                <a className="main-category-anchor">
-                  <span className="main-category">
+            <div className='text-container'>
+              <Link href='#'>
+                <a className='main-category-anchor'>
+                  <span className='main-category'>
                     {Object.values(data)[6].category}
                   </span>
                 </a>
               </Link>
-              <span className="main-title">{Object.values(data)[6].title}</span>
-              <span className="readmore">
-                <div className="icon-container">
+              <span className='main-title'>{Object.values(data)[6].title}</span>
+              <span className='readmore'>
+                <div className='icon-container'>
                   <Image
-                    src="/assets/bars.svg"
-                    layout="fill"
-                    className="icon-svg"
+                    src='/assets/bars.svg'
+                    layout='fill'
+                    className='icon-svg'
                   ></Image>
                 </div>
                 Read
               </span>
             </div>
-            <div className="shadow-image"></div>
+            <div className='shadow-image'></div>
           </div>
         </a>
       </Link>
@@ -68,7 +68,7 @@ const Story = (props: Props) => {
           overflow: hidden;
         }
         .image-container:hover .image-scale {
-          transform: scale(1.3);
+          transform: scale(1.1);
         }
         .text-container {
           position: absolute;
@@ -85,7 +85,7 @@ const Story = (props: Props) => {
           text-decoration: none;
         }
         .main-category {
-          font-family: "Century Gothic", sans-serif;
+          font-family: 'Century Gothic', sans-serif;
           font-size: 12px;
           text-transform: uppercase;
           letter-spacing: 3px;
@@ -101,7 +101,7 @@ const Story = (props: Props) => {
         .readmore {
           display: flex;
           color: #fff;
-          font-family: "Century Gothic", sans-serif;
+          font-family: 'Century Gothic', sans-serif;
           font-size: 12px;
           font-weight: 700;
           letter-spacing: 3px;

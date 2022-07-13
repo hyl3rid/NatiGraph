@@ -1,13 +1,13 @@
-import React from "react";
-import Link from "next/link";
-import { GetStaticProps } from "next";
-import Layout from "../components/Layout";
-import Post, { PostProps } from "../components/Post";
-import Today from "../components/Today";
-import Story from "../components/Story";
-import Tiles from "../components/Tiles";
-import prisma from "../lib/prisma";
-import { usePost } from "../context/PostContext";
+import React from 'react';
+import Link from 'next/link';
+import { GetStaticProps } from 'next';
+import Layout from '../components/Layout';
+import Post, { PostProps } from '../components/Post';
+import Today from '../components/Today';
+import Story from '../components/Story';
+import Tiles from '../components/Tiles';
+import Streaming from '../components/Streaming';
+import { usePost } from '../context/PostContext';
 
 type Props = {
   feed: PostProps[];
@@ -18,23 +18,23 @@ const Blog: React.FC<Props> = () => {
   console.log(data);
   return (
     <Layout>
-      <div className="background">
-        <div className="margins-div">
-          <div className="principal-headings">
-            <h1 className="principal-title">Latest Stories</h1>
-            <span className="principal-subheading">
-              <Link href="#">
-                <a className="anchor-container">
-                  <span className="anchor-text">Pellentesque</span>
-                  <div className="anchor-underline anchor-bottom"></div>
+      <div className='background'>
+        <div className='margins-div'>
+          <div className='principal-headings'>
+            <h1 className='principal-title'>Latest Stories</h1>
+            <span className='principal-subheading'>
+              <Link href='#'>
+                <a className='anchor-container'>
+                  <span className='anchor-text'>Pellentesque</span>
+                  <div className='anchor-underline anchor-bottom'></div>
                 </a>
               </Link>
               &nbsp;habitant morbi tristique senectus et netus et malesuada
               fames.
             </span>
-            <div className="green-bar"></div>
+            <div className='green-bar'></div>
           </div>
-          <div className="stories">
+          <div className='stories'>
             <Today />
             <div>
               <Story />
@@ -43,6 +43,9 @@ const Blog: React.FC<Props> = () => {
           </div>
         </div>
       </div>
+
+      <Streaming />
+
       <style jsx>{`
         .background {
           background-color: #000;
@@ -58,7 +61,7 @@ const Blog: React.FC<Props> = () => {
           padding-bottom: 60px;
         }
         .principal-title {
-          font-family: "Century Gothic", sans-serif;
+          font-family: 'Century Gothic', sans-serif;
           text-transform: uppercase;
           font-size: 54px;
           font-weight: 700;
@@ -79,7 +82,7 @@ const Blog: React.FC<Props> = () => {
           width: 100%;
         }
         .anchor-container:hover > .anchor-underline {
-          height: 22px;
+          height: 19px;
           animation-name: slideup;
           animation-duration: 0.2s;
         }
@@ -87,6 +90,16 @@ const Blog: React.FC<Props> = () => {
           text-decoration: none;
           position: relative;
           display: flex;
+        }
+
+        @keyframes slideup {
+          from {
+            height: 2px;
+          }
+
+          to {
+            height: 19px;
+          }
         }
         .anchor-text {
           z-index: 100;
@@ -106,10 +119,15 @@ const Blog: React.FC<Props> = () => {
         .anchor-bottom {
           bottom: 3px;
         }
-
         .stories {
           display: flex;
           justify-content: space-between;
+        }
+        .green-bar {
+          width: 60px;
+          height: 4px;
+          background-color: var(--main-color);
+          margin: auto;
         }
       `}</style>
     </Layout>

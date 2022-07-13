@@ -162,6 +162,9 @@ const Today = (props: Props) => {
             color: #fff;
             margin-top: 10px;
           }
+          .seemore:hover {
+            color: #000;
+          }
           .seemore-container {
             display: table;
             padding-top: 10px;

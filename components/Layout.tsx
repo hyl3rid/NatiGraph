@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import React, { ReactNode } from 'react';
+import Header from './Header';
+import Footer from './Footer';
 
 type Props = {
   children: ReactNode;
@@ -9,16 +9,17 @@ type Props = {
 const Layout: React.FC<Props> = (props) => (
   <div>
     <Header />
-    <div className="layout">{props.children}</div>
+    <div className='layout'>{props.children}</div>
     <Footer />
     <style jsx global>{`
       :root {
         --main-color: #66cc66;
+        --white: #fff;
       }
 
       @font-face {
-        font-family: "Century Gothic";
-        src: url("../fonts/CenturyGothic.ttf");
+        font-family: 'Century Gothic';
+        src: url('../fonts/CenturyGothic.ttf');
       }
 
       html {
@@ -35,7 +36,7 @@ const Layout: React.FC<Props> = (props) => (
         margin: 0;
         padding: 0;
         font-size: 16px;
-        font-family: "Helvetica", sans-serif;
+        font-family: 'Helvetica', sans-serif;
         background: rgba(0, 0, 0, 0.05);
       }
 

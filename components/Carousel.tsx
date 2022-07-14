@@ -25,7 +25,9 @@ const Carousel = () => {
     <>
       <section className='slider'>
         <button
-          className={current !== 0 ? 'icon-container' : 'icon-container hidden'}
+          className={
+            current !== 0 ? 'icon-container left' : 'icon-container left hidden'
+          }
         >
           <Image
             src='/assets/left-arrow.svg'
@@ -105,9 +107,14 @@ const Carousel = () => {
           margin-right: 6px;
           position: absolute;
           cursor: pointer;
+          background-color: transparent;
+          border: none;
         }
         .right {
           right: 20px;
+        }
+        .left {
+          left: 20px;
         }
         .icon-svg {
           position: relative;

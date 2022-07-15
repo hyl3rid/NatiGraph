@@ -1,8 +1,8 @@
-import React from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { signOut, useSession } from "next-auth/react";
-import Image from "next/image";
+import React from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { signOut, useSession } from 'next-auth/react';
+import Image from 'next/image';
 
 const Header: React.FC = () => {
   const router = useRouter();
@@ -12,13 +12,13 @@ const Header: React.FC = () => {
   const { data: session, status } = useSession();
 
   let left = (
-    <div className="left">
-      <Link href="/">
-        <div className="image-wrapper">
+    <div className='left'>
+      <Link href='/'>
+        <div className='image-wrapper'>
           <Image
-            alt="National Geographic Logo - Home"
-            src="/assets/green-natgeo.svg"
-            layout="fill"
+            alt='National Geographic Logo - Home'
+            src='/assets/green-natgeo.svg'
+            layout='fill'
           />
         </div>
       </Link>
@@ -34,11 +34,11 @@ const Header: React.FC = () => {
 
   let right = null;
 
-  if (status === "loading") {
+  if (status === 'loading') {
     left = (
-      <div className="left">
-        <Link href="/">
-          <a className="bold" data-active={isActive("/")}>
+      <div className='left'>
+        <Link href='/'>
+          <a className='bold' data-active={isActive('/')}>
             Feed
           </a>
         </Link>
@@ -53,7 +53,7 @@ const Header: React.FC = () => {
             display: inline-block;
           }
 
-          .left a[data-active="true"] {
+          .left a[data-active='true'] {
             color: gray;
           }
 
@@ -64,7 +64,7 @@ const Header: React.FC = () => {
       </div>
     );
     right = (
-      <div className="right">
+      <div className='right'>
         <p>Validating session ...</p>
         <style jsx>{`
           .right {
@@ -77,65 +77,65 @@ const Header: React.FC = () => {
 
   if (!session) {
     right = (
-      <div className="right">
-        <Link href="/api/auth/test">
+      <div className='right'>
+        <Link href='/api/auth/test'>
           <a
-            data-active={isActive("/signup")}
-            className="login-button spacer-anchor"
+            data-active={isActive('/signup')}
+            className='login-button spacer-anchor'
           >
             LOGIN
           </a>
         </Link>
-        <Link href="/api/auth/signin">
-          <a data-active={isActive("/signup")} className="anchor-search-icon">
+        <Link href='/api/auth/signin'>
+          <a data-active={isActive('/signup')} className='anchor-search-icon'>
             <svg
-              version="1.1"
-              id="Capa_1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlnsXlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              className="search-icon"
-              viewBox="0 0 52.966 52.966"
-              style={{ background: "transparent none repeat scroll 0% 0%" }}
-              xmlSpace="preserve"
+              version='1.1'
+              id='Capa_1'
+              xmlns='http://www.w3.org/2000/svg'
+              xmlnsXlink='http://www.w3.org/1999/xlink'
+              x='0px'
+              y='0px'
+              className='search-icon'
+              viewBox='0 0 52.966 52.966'
+              style={{ background: 'transparent none repeat scroll 0% 0%' }}
+              xmlSpace='preserve'
             >
               <path
-                d="M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21
+                d='M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21
 	c5.083,0,9.748-1.817,13.384-4.832l14.895,15.491c0.196,0.205,0.458,0.307,0.721,0.307c0.25,0,0.499-0.093,0.693-0.279
 	C52.074,52.304,52.086,51.671,51.704,51.273z M21.983,40c-10.477,0-19-8.523-19-19s8.523-19,19-19s19,8.523,19,19
-	S32.459,40,21.983,40z"
+	S32.459,40,21.983,40z'
               />
             </svg>
           </a>
         </Link>
-        <Link href="/api/auth/signin">
-          <a data-active={isActive("/signup")} className="renew-anchor">
-            <span className="renew-text">Renew</span>
-            <div className="renew-underline"></div>
+        <Link href='/api/auth/signin'>
+          <a data-active={isActive('/signup')} className='renew-anchor'>
+            <span className='renew-text'>Renew</span>
+            <div className='renew-underline'></div>
           </a>
         </Link>
-        <Link href="/api/auth/signin">
-          <a data-active={isActive("/signup")} className="subscribe-anchor">
-            <span className="subscribe-text">SUBSCRIBE</span>
-            <div className="subscribe-yellow-layer"></div>
-            <div className="subscribe-black-layer"></div>
+        <Link href='/api/auth/signin'>
+          <a data-active={isActive('/signup')} className='subscribe-anchor'>
+            <span className='subscribe-text'>SUBSCRIBE</span>
+            <div className='subscribe-yellow-layer'></div>
+            <div className='subscribe-black-layer'></div>
           </a>
         </Link>
-        <Link href="/api/auth/signin">
+        <Link href='/api/auth/signin'>
           <a
-            data-active={isActive("/signup")}
-            className="menu-anchor spacer-anchor"
+            data-active={isActive('/signup')}
+            className='menu-anchor spacer-anchor'
           >
             <span>MENU</span>
             <svg
-              className="double-chevron-down"
+              className='double-chevron-down'
               // style={{width: '1em', height: '1em', vertical-align: 'middle', fill: 'currentColor',overflow: 'hidden'}}
-              viewBox="0 0 1024 1024"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
+              viewBox='0 0 1024 1024'
+              version='1.1'
+              xmlns='http://www.w3.org/2000/svg'
             >
-              <path d="M707.84 238.506667 768 298.666667 512 554.666667 256 298.666667 316.16 238.506667 512 433.92 707.84 238.506667M707.84 494.506667 768 554.666667 512 810.666667 256 554.666667 316.16 494.506667 512 689.92 707.84 494.506667Z" />
+              <path d='M707.84 238.506667 768 298.666667 512 554.666667 256 298.666667 316.16 238.506667 512 433.92 707.84 238.506667M707.84 494.506667 768 554.666667 512 810.666667 256 554.666667 316.16 494.506667 512 689.92 707.84 494.506667Z' />
             </svg>
           </a>
         </Link>
@@ -160,7 +160,7 @@ const Header: React.FC = () => {
           }
 
           .login-button {
-            font-family: "Century Gothic", sans-serif;
+            font-family: 'Century Gothic', sans-serif;
             font-weight: 800;
             font-size: 14px;
             letter-spacing: 3px;
@@ -196,7 +196,7 @@ const Header: React.FC = () => {
           }
 
           .renew-anchor {
-            font-family: "Century Gothic", sans-serif;
+            font-family: 'Century Gothic', sans-serif;
             font-size: 14px;
             display: flex;
             flex-direction: column;
@@ -233,7 +233,7 @@ const Header: React.FC = () => {
           }
 
           .subscribe-anchor {
-            font-family: "Century Gothic", sans-serif;
+            font-family: 'Century Gothic', sans-serif;
             font-weight: 700;
             font-size: 12px;
             letter-spacing: 3px;
@@ -247,12 +247,12 @@ const Header: React.FC = () => {
           }
 
           .subscribe-text {
-            color: #fff;
+            color: var(--white);
             z-index: 150;
           }
 
           .subscribe-black-layer {
-            background-color: #000;
+            background-color: var(--black);
             height: 47px;
             width: 100%;
             z-index: 100;
@@ -260,7 +260,7 @@ const Header: React.FC = () => {
           }
 
           .subscribe-yellow-layer {
-            background-color: #66cc66;
+            background-color: var(--main-color);
             height: 47px;
             width: 100%;
             z-index: 50;
@@ -331,7 +331,7 @@ const Header: React.FC = () => {
           }
 
           .menu-anchor {
-            font-family: "Century Gothic", sans-serif;
+            font-family: 'Century Gothic', sans-serif;
             font-weight: 700;
             position: relative;
             display: flex;
@@ -360,14 +360,14 @@ const Header: React.FC = () => {
 
   if (session) {
     left = (
-      <div className="left">
-        <Link href="/">
-          <a className="bold" data-active={isActive("/")}>
+      <div className='left'>
+        <Link href='/'>
+          <a className='bold' data-active={isActive('/')}>
             Feed
           </a>
         </Link>
-        <Link href="/drafts">
-          <a data-active={isActive("/drafts")}>My drafts</a>
+        <Link href='/drafts'>
+          <a data-active={isActive('/drafts')}>My drafts</a>
         </Link>
         <style jsx>{`
           .bold {
@@ -380,7 +380,7 @@ const Header: React.FC = () => {
             display: inline-block;
           }
 
-          .left a[data-active="true"] {
+          .left a[data-active='true'] {
             color: gray;
           }
 
@@ -391,11 +391,11 @@ const Header: React.FC = () => {
       </div>
     );
     right = (
-      <div className="right">
+      <div className='right'>
         <p>
           {session.user.name} ({session.user.email})
         </p>
-        <Link href="/create">
+        <Link href='/create'>
           <button>
             <a>New post</a>
           </button>

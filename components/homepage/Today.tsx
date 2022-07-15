@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { usePost } from "../context/PostContext";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePost } from '../../context/PostContext';
 
 type Props = {};
 
@@ -11,55 +11,55 @@ const Today = (props: Props) => {
   return (
     <>
       <div>
-        {" "}
-        <div className="picks-header">
-          <div className="vertical-green-bar"></div>
-          <h2 className="main-title">Today's Picks</h2>
+        {' '}
+        <div className='picks-header'>
+          <div className='vertical-green-bar'></div>
+          <h2 className='main-title'>Today's Picks</h2>
         </div>
         {Object.values(data).map((item, index) => {
           if (index > 5) return;
           return (
-            <div className="card-container" key={item.id}>
-              <Link href="#">
+            <div className='card-container' key={item.id}>
+              <Link href='#'>
                 <a
-                  className="anchor-tag img-margin"
+                  className='anchor-tag img-margin'
                   style={{
-                    width: "90px",
-                    height: "90px",
-                    position: "relative",
+                    width: '90px',
+                    height: '90px',
+                    position: 'relative',
                   }}
                 >
                   <Image
                     src={`${item.photos[0]}`}
                     alt="Basilica di Sant'Andrea, Piazza Andrea Mantegna, Mantua, Province of Mantua, Italy"
-                    layout="fill"
+                    layout='fill'
                   />
                 </a>
               </Link>
-              <div className="text-container">
-                <Link href="#">
-                  <a className="anchor-tag anchor-tag-padding">
-                    <span className="category-span">{item.category || ""}</span>
+              <div className='text-container'>
+                <Link href='#'>
+                  <a className='anchor-tag anchor-tag-padding'>
+                    <span className='category-span'>{item.category || ''}</span>
                   </a>
                 </Link>
-                <Link href="#">
-                  <a className="anchor-tag">
-                    <span className="title-span">{item.title || ""}</span>
+                <Link href='#'>
+                  <a className='anchor-tag'>
+                    <span className='title-span'>{item.title || ''}</span>
                   </a>
                 </Link>
               </div>
             </div>
           );
         })}
-        <Link href="#">
-          <a className="anchor-container seemore-container">
-            <span className="anchor-text seemore">See More</span>
-            <div className="anchor-underline-seemore"></div>
+        <Link href='#'>
+          <a className='anchor-container seemore-container'>
+            <span className='anchor-text seemore'>See More</span>
+            <div className='anchor-underline-seemore'></div>
           </a>
         </Link>
         <style jsx>{`
           .main-title {
-            font-family: "Century Gothic", sans-serif;
+            font-family: 'Century Gothic', sans-serif;
             font-size: 32px;
             letter-spacing: 3px;
             margin: 0;
@@ -78,7 +78,7 @@ const Today = (props: Props) => {
             width: 203px;
           }
           .category-span {
-            font-family: "Century Gothic", sans-serif;
+            font-family: 'Century Gothic', sans-serif;
             font-size: 12px;
             letter-spacing: 1px;
             font-weight: 700;
@@ -153,7 +153,7 @@ const Today = (props: Props) => {
           }
           .seemore {
             position: relative;
-            font-family: "Century Gothic", sans-serif;
+            font-family: 'Century Gothic', sans-serif;
             font-weight: 700;
             font-size: 12px;
             letter-spacing: 3px;

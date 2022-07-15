@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import VideoBackground from './VideoBackground';
-import Carousel from './Carousel';
+import VideoBackground from '../VideoBackground';
+import Carousel from '../Carousel';
 
 type Props = {};
 

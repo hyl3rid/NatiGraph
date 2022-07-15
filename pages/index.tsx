@@ -3,10 +3,7 @@ import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import Layout from '../components/Layout';
 import Post, { PostProps } from '../components/Post';
-import Today from '../components/Today';
-import Story from '../components/Story';
-import Tiles from '../components/Tiles';
-import Streaming from '../components/Streaming';
+import { Today, Story, Tiles, Streaming, SignUp } from '../components';
 import { usePost } from '../context/PostContext';
 
 type Props = {
@@ -15,7 +12,7 @@ type Props = {
 
 const Blog: React.FC<Props> = () => {
   const data = usePost();
-  console.log(data);
+  // console.log(data);
   return (
     <Layout>
       <div className='background'>
@@ -45,6 +42,8 @@ const Blog: React.FC<Props> = () => {
       </div>
 
       <Streaming />
+
+      <SignUp />
 
       <style jsx>{`
         .background {

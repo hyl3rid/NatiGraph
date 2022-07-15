@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { usePost } from "../context/PostContext";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePost } from '../../context/PostContext';
 
 type Props = {};
 
@@ -11,37 +11,37 @@ const Tiles = (props: Props) => {
   console.log(Object.values(data));
   return (
     <>
-      <div className="cards-containers">
-        <Link href="#">
-          <a className="anchor-container">
-            <div className="card-container card-box-shadow">
-              <div className="image-container">
-                <div className="image-scale">
+      <div className='cards-containers'>
+        <Link href='#'>
+          <a className='anchor-container'>
+            <div className='card-container card-box-shadow'>
+              <div className='image-container'>
+                <div className='image-scale'>
                   <Image
-                    src="https://images.unsplash.com/photo-1624239364354-93ae3e590f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80"
-                    height="215"
-                    width="313"
+                    src='https://images.unsplash.com/photo-1624239364354-93ae3e590f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80'
+                    height='215'
+                    width='313'
                   ></Image>
                 </div>
-                <div className="green-animated-border"></div>
+                <div className='green-animated-border'></div>
               </div>
-              <div className="card-texts">
-                <Link href="#">
-                  <a className="card-category-container">
-                    <span className="card-category">
+              <div className='card-texts'>
+                <Link href='#'>
+                  <a className='card-category-container'>
+                    <span className='card-category'>
                       {Object.values(data)[1].category}
                     </span>
                   </a>
                 </Link>
-                <span className="card-title">
+                <span className='card-title'>
                   {Object.values(data)[6].title}
                 </span>
-                <span className="readmore">
-                  <div className="icon-container">
+                <span className='readmore'>
+                  <div className='icon-container'>
                     <Image
-                      src="/assets/bars.svg"
-                      layout="fill"
-                      className="icon-svg"
+                      src='/assets/bars.svg'
+                      layout='fill'
+                      className='icon-svg'
                     ></Image>
                   </div>
                   Read
@@ -50,36 +50,36 @@ const Tiles = (props: Props) => {
             </div>
           </a>
         </Link>
-        <Link href="#">
-          <a className="anchor-container">
-            <div className="card-container">
-              <div className="image-container">
-                <div className="image-scale">
+        <Link href='#'>
+          <a className='anchor-container'>
+            <div className='card-container'>
+              <div className='image-container'>
+                <div className='image-scale'>
                   <Image
-                    src="https://images.unsplash.com/photo-1624239364354-93ae3e590f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80"
-                    layout="fill"
-                    objectFit="cover"
+                    src='https://images.unsplash.com/photo-1624239364354-93ae3e590f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80'
+                    layout='fill'
+                    objectFit='cover'
                   ></Image>
                 </div>
-                <div className="green-animated-border"></div>
+                <div className='green-animated-border'></div>
               </div>
-              <div className="card-texts second-background">
-                <Link href="#">
-                  <a className="card-category-container">
-                    <span className="card-category second-texts">
+              <div className='card-texts second-background'>
+                <Link href='#'>
+                  <a className='card-category-container'>
+                    <span className='card-category second-texts'>
                       {Object.values(data)[1].category}
                     </span>
                   </a>
                 </Link>
-                <span className="card-title second-texts">
+                <span className='card-title second-texts'>
                   {Object.values(data)[6].title}
                 </span>
-                <span className="readmore second-texts">
-                  <div className="icon-container">
+                <span className='readmore second-texts'>
+                  <div className='icon-container'>
                     <Image
-                      src="/assets/bars-black.svg"
-                      layout="fill"
-                      className="icon-svg"
+                      src='/assets/bars-black.svg'
+                      layout='fill'
+                      className='icon-svg'
                     ></Image>
                   </div>
                   Read
@@ -124,7 +124,7 @@ const Tiles = (props: Props) => {
           letter-spacing: 3px;
           line-height: 1.5;
           text-transform: uppercase;
-          font-family: "Century Gothic", sans-serif;
+          font-family: 'Century Gothic', sans-serif;
         }
         .card-category:hover {
           text-decoration: underline;
@@ -142,7 +142,7 @@ const Tiles = (props: Props) => {
         .readmore {
           display: flex;
           color: #fff;
-          font-family: "Century Gothic", sans-serif;
+          font-family: 'Century Gothic', sans-serif;
           font-size: 12px;
           font-weight: 700;
           letter-spacing: 3px;

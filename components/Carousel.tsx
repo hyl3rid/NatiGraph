@@ -28,6 +28,7 @@ const Carousel = () => {
           className={
             current !== 0 ? 'icon-container left' : 'icon-container left hidden'
           }
+          type='button'
         >
           <Image
             src='/assets/left-arrow.svg'
@@ -82,6 +83,7 @@ const Carousel = () => {
                 ? 'icon-container right'
                 : 'icon-container right hidden'
             }
+            type='button'
           >
             <Image
               src='/assets/right-arrow.svg'

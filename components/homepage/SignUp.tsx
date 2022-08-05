@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
+import { useModal } from '../../context/ModalContext';
 
 type Props = {};
 
 const SignUp = (props: Props) => {
+  const data = useModal();
+
+  const handleToggleIsOpen = () => {
+    console.log(!data[0].isOpen);
+    data[0].saveSetIsOpen(!data[0].isOpen);
+  };
+
   return (
     <>
       <section className='image-container'>
@@ -21,7 +29,7 @@ const SignUp = (props: Props) => {
             Quisque id facilisis nunc. Sed molestie enim metus, at malesuada
             augue ultrices sed.
           </p>
-          <button className='signup'>
+          <button className='signup' onClick={handleToggleIsOpen}>
             <span>Donec ac</span>
             <div className='button-label-green'></div>
           </button>

@@ -1,6 +1,6 @@
-import { createContext, useContext, ReactNode, useState } from "react";
-import { useQuery } from "@apollo/client";
-import { gql } from "@apollo/client";
+import { createContext, useContext, ReactNode, useState } from 'react';
+import { useQuery } from '@apollo/client';
+import { gql } from '@apollo/client';
 
 // type postContextType = {
 //   title: string;
@@ -36,18 +36,18 @@ type postContextType = [
 const postContextDefaultValues: postContextType = [
   {
     id: null,
-    title: "",
+    title: '',
     published: false,
-    createdAt: "",
-    updatedAt: "",
+    createdAt: '',
+    updatedAt: '',
     // author        User?    @relation(fields: [authorId], references: [id])
     authorId: null,
     content: null,
-    description: "",
+    description: '',
     photographers: [],
     photos: [],
     captions: [],
-    category: "",
+    category: '',
     readTime: null,
   },
 ];

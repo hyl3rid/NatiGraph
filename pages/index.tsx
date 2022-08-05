@@ -3,16 +3,16 @@ import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import Layout from '../components/Layout';
 import Post, { PostProps } from '../components/Post';
-import { Today, Story, Tiles, Streaming, SignUp } from '../components';
-import { usePost } from '../context/PostContext';
+import { Today, Story, Tiles, Streaming, SignUp, Modal } from '../components';
+import { useModal } from '../context/ModalContext';
 
 type Props = {
   feed: PostProps[];
 };
 
 const Blog: React.FC<Props> = () => {
-  const data = usePost();
-  // console.log(data);
+  const data = useModal();
+  console.log(data);
   return (
     <Layout>
       <div className='background'>
@@ -44,7 +44,7 @@ const Blog: React.FC<Props> = () => {
       <Streaming />
 
       <SignUp />
-
+      {data[0].isOpen && <Modal />}
       <style jsx>{`
         .background {
           background-color: #000;

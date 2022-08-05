@@ -16,6 +16,7 @@ const Layout: React.FC<Props> = (props) => (
         --main-color: #66cc66;
         --white: #fff;
         --black: #000;
+        --grey-light: #999;
       }
 
       @font-face {

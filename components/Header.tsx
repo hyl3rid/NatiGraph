@@ -153,6 +153,7 @@ const Header: React.FC = () => {
             display: flex;
             align-items: center;
             margin-left: auto;
+            background-color: var(--grey-light);
           }
 
           .right a {
